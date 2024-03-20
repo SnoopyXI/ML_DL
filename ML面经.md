@@ -3,7 +3,7 @@
 * 基本思想就是贪心算法，每一轮都最小化损失函数，下一轮在上一轮的残差基础上进行拟合。
   
     ![image](https://github.com/SnoopyXI/-/assets/78628328/923cf47e-2d33-4eed-a4e9-b9fba09f8cda)
-
+  
     ![image](https://github.com/SnoopyXI/-/assets/78628328/51c1a607-b272-48a8-adf8-ff4e13386e88)
 
 
