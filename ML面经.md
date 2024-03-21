@@ -36,7 +36,7 @@
 * Precision：$Precision = \frac{TP}{TP + FP}$，表示被预测为正例的样本中有多少是正例
 * Recall：$Recall = \frac{TP}{TP + FN}$，表示所有正例样本中有多少被预测为正例
 * F1-score：$F1-score = \frac{2 \times Precision \times Recall}{Precision + Recall}$，两者的一个权衡
-* AUC：ROC曲线下的面积
+* AUC：ROC曲线下的面积。AUC越大，正负样本预测的gap越大，体现了模型的排序能力
 * AP：PR曲线下的面积
   ![image](https://github.com/SnoopyXI/-/assets/78628328/f3af324c-9e6d-4605-b204-85060e64d56c)  ![image](https://github.com/SnoopyXI/-/assets/78628328/763ff08c-b6cf-49a2-90b9-f14f47ee97ac)
 
