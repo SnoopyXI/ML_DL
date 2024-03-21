@@ -13,3 +13,20 @@
   * 信息增益/互信息： $IG(Y, X) = H(Y) - H(Y|X)$
   * 基尼系数： $Gini(p) = \displaystyle\sum^K_{k=1}p_k(1-p_k)$
   * KL散度/相对熵： $D_{KL}(p||q) = \displaystyle\sum^N_{i=1}p(x_i)(\log p(x_i) - \log q(x_i)) = E[\log p(x_i) - \log q(x_i)]$
+* 分类损失函数
+  * 交叉熵损失： $CE = - \displaystyle\sum_i y_i \log \hat y_i$, 在二分类情况下，就和KL散度是一样的
+  * 指数损失： $EL = \displaystyle\sum_i e^{-y_i \cdot \hat y_i}$
+  * Hinge损失： $HL = \displaystyle\sum^n_{i=1} \max(0, 1-y_i(w^T x_i + b))$ 
+  
+
+
+**3、介绍一下SVM**
+* SVM的基本想法是求解能够正确划分训练数据集并且几何间隔最大的分离超平面。SMO算法、KKT条件是SVM的求解的两个技巧。
+
+**4、判别式模型和生成式模型**
+* 判别式模型：直接建模后验概率进行分类
+* 生成式模型：先要学习类别的分布，而后根据与不同类别分布的相似性进行分类
+  ![image](https://github.com/SnoopyXI/-/assets/78628328/c7f1ebe1-b2ea-4896-93a0-2e5cfd991de9)  ![image](https://github.com/SnoopyXI/-/assets/78628328/55867c0c-0730-4249-9d2d-6c109d39c221)
+
+
+  
