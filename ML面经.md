@@ -31,5 +31,15 @@
 * 生成式模型：先要学习类别的分布，而后根据与不同类别分布的相似性进行分类
   ![image](https://github.com/SnoopyXI/-/assets/78628328/c7f1ebe1-b2ea-4896-93a0-2e5cfd991de9)  ![image](https://github.com/SnoopyXI/-/assets/78628328/55867c0c-0730-4249-9d2d-6c109d39c221)
 
+  
+**5、模型评价指标及优缺点**
+* Precision：$Precision = \frac{TP}{TP + FP}$，表示被预测为正例的样本中有多少是正例
+* Recall：$Recall = \frac{TP}{TP + FN}$，表示所有正例样本中有多少被预测为正例
+* F1-score：$F1-score = \frac{2 \times Precision \times Recall}{Precision + Recall}$，两者的一个权衡
+* AUC：ROC曲线下的面积
+* AP：PR曲线下的面积
+  ![image](https://github.com/SnoopyXI/-/assets/78628328/f3af324c-9e6d-4605-b204-85060e64d56c)  ![image](https://github.com/SnoopyXI/-/assets/78628328/763ff08c-b6cf-49a2-90b9-f14f47ee97ac)
+
+
 
   
