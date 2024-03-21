@@ -12,4 +12,4 @@
   * 条件熵： $H(Y|X) = \displaystyle\sum_{x \in X}p(x)H(Y|X=x)$
   * 信息增益/互信息： $IG(Y, X) = H(Y) - H(Y|X)$
   * 基尼系数： $Gini(p) = \displaystyle\sum^K_{k=1}p_k(1-p_k)$
-  * KL散度/相对熵： $D_{KL}(p||q) = \displaystyle\sum^N_{i=1}p(x_i)(\log p(x_i) - \log q(x_i)) = E[\log p(x_i) - \log q(x_i)$
+  * KL散度/相对熵： $D_{KL}(p||q) = \displaystyle\sum^N_{i=1}p(x_i)(\log p(x_i) - \log q(x_i)) = E[\log p(x_i) - \log q(x_i)]$
