@@ -17,7 +17,10 @@
   * 交叉熵损失： $CE = - \displaystyle\sum_i y_i \log \hat y_i$, 在二分类情况下，就和KL散度是一样的
   * 指数损失： $EL = \displaystyle\sum_i e^{-y_i \cdot \hat y_i}$
   * Hinge损失： $HL = \displaystyle\sum^n_{i=1} \max(0, 1-y_i(w^T x_i + b))$ 
-  
+* 回归损失函数
+  * 均方误差： $MSE = \displaystyle\sum^n_{i=1}(y_i - \hat y_i)^2$
+  * 平均绝对误差： $MAE = \displaystyle\sum^n_{i=1} |y_i - \hat y_i|$
+ 
 
 
 **3、介绍一下SVM**
