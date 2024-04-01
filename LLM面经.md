@@ -51,6 +51,14 @@
   * 位置编码：$\text{PositionalEncoding}(pos, 2i) = \sin\left(\frac{pos}{10000^{2i/d_{\text{model}}}}\right)$;  $\text{PositionalEncoding}(pos, 2i+1) = \cos(\frac{pos}{10000^{2i/d_{\text{model}}}})$
   * 自注意力：注意力权重矩阵 $A = \text{softmax}\left(\frac{QK^T}{\sqrt{d_{\text{key}}}}\right)$; $\text{SelfAttention}(X) = AV$ ![1710732162943](image/LLM面经/1710732162943.png)
   * 为什么要乘以$\frac{1}{\sqrt{d_k}}$：Q和K直接相乘的值容易落入softmax的饱和区域，导致梯度很小，收敛困难
+  * 为什么是$\frac{1}{\sqrt{d_k}}$，不是$\frac{1}{{d_k}^{\frac{2}{3}}}$或者其它的呢：
+    * 首先**假设q和k都是服从期望为0，方差为1的独立的随机变量**。假设：X = q_i，Y = k_i，那么：
+      1. $E(XY) = E(X)E(Y) = 0$ 
+      2. $D(XY) = D(X)D(Y) = 1$
+      3. $D(QK / \sqrt{d_k}) = \frac{d_k}{d_k} = 1$
+
+      需要注意的是，$D(QK) = D(\sum_{i=0}^{dk}q_i \times k_i) = d_k \times 1 = d_k$
+
 
 **9、BN和LN的区别**
 
@@ -82,3 +90,11 @@
   * MHA改成GQA：整体参数量减少
     ![1710750310793](image/LLM面经/1710750310793.png)
 * GLM
+  
+  * 待补充
+
+**12、LLM微调的方法有哪些**
+
+* PEFT
+
+**13、BPE等**
