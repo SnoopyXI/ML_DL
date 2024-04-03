@@ -63,9 +63,8 @@
 **9、BN和LN的区别**
 
 * BN：同一个批次内，所有样本在同一个特征维度上做标准化
-* LN：同一个样本内，所有特征做标准化
-
-![1710742952982](image/LLM面经/1710742952982.png)
+* LN：同一个样本内，所有特征做标准化  
+![alt text](image/LLM面经/normalization.png)
 
 **10、LLM的参数量计算**
 
@@ -82,7 +81,7 @@
   ![1710748836288](image/LLM面经/1710748836288.png)![1710748940255](image/LLM面经/1710748940255.png)
 * llama v.s. GPT
 
-  * 改用RoPE旋转位置编码，并且嵌入的位置不再是GPT-3中的输入层，llama是把RoPE在每一层self-attention中都嵌入
+  * 改用RoPE旋转位置编码，并且嵌入的位置不再是GPT-3中的输入层，**llama是把RoPE在每一层self-attention中都嵌入**
   * Norm层不再使用GPT-3中的layernorm，改换成RMSNorm，计算效率更高：$\frac{x}{\sqrt{\bar{x^2}+\epsilon}} \cdot W + B$
   * FFN中的激活函数不再是Relu，llama改用成SwiGLU
 * llama2 v.s. llama
@@ -119,4 +118,10 @@
     * ReLoRA：主要用于解决多个LoRA叠加训练时秩不增的问题，LoRA的微调精度受到式$rank(A+B)<=rank(A)+rank(B)$的限制，即我们用于加和更新的矩阵的秩最多也只是矩阵和的秩，而非矩阵秩的和，这会导致我们用于更新的信息量存在上限，从而影响我们的训练效果。解决的办法是重新启动LoRA，这意味着我们在训练期间合并WA和WB并重置这些矩阵的值，我们可以增加更新的矩阵的秩。
 
 
-**13、BPE等**
+**13、nlp任务一般流程**  
+* 原始文本 -> 分词 -> 清洗 -> 标注化 -> 词向量嵌入 -> 建模
+
+**14、LLM的性能评价指标**
+* 文本摘要：ROUGE
+* 机器翻译：BLEU
+* 通用能力评估：C-EVAL, MMLU, SuperGLUE
