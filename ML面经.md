@@ -33,8 +33,8 @@
 
   
 **5、模型评价指标及优缺点**
-* Precision：$Precision = \frac{TP}{TP + FP}$，表示被预测为正例的样本中有多少是正例
-* Recall：$Recall = \frac{TP}{TP + FN}$，表示所有正例样本中有多少被预测为正例
+* Precision：$Precision = \frac{TP}{TP + FP}$，预测为正例的样本中，有多少是真正例
+* Recall：$Recall = \frac{TP}{TP + FN}$，真实标签为正例的样本中，有多少被预测为正例
 * F1-score：$F1-score = \frac{2 \times Precision \times Recall}{Precision + Recall}$，两者的一个权衡
 * AUC：ROC曲线下的面积。AUC越大，正负样本预测的gap越大，体现了模型的排序能力
 * AP：PR曲线下的面积
